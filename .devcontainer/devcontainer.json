@@ -1,0 +1,29 @@
+{
+    "name": "Python 3.9 Flask Dev Container",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "..",
+        "args": { 
+            "VARIANT": "3.9",
+            "INSTALL_NODE": "false"
+        }
+    },
+    "runArgs": [
+        "-p", "5000:5000"
+    ],
+    "settings": { 
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "python.pythonPath": "/usr/local/bin/python",
+        "python.linting.pylintEnabled": false,
+        "python.linting.enabled": true,
+        "python.format.sortImports": true,
+        "python.testing.pytestArgs": [],
+        "python.testing.unittestEnabled": false,
+        "python.testing.nosetestsEnabled": false,
+        "python.testing.pytestEnabled": true
+    },
+    "extensions": [
+        "ms-python.python"
+    ],
+    "forwardPorts": [5000]
+}
